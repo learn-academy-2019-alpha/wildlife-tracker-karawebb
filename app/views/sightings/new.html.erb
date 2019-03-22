@@ -1,0 +1,29 @@
+<h1>New Sighting</h1>
+
+<%= form_for @sighting do |f| %>
+<%= f.label :time %>
+<%= f.text_field :time %> </br>
+
+</br>
+
+<%= f.label :date %>
+<%= f.text_field :date %> </br>
+
+</br>
+
+<%= f.label :latitude %>
+<%= f.text_field :latitude %> </br>
+
+</br>
+
+<%= f.label :longitude %>
+<%= f.text_field :longitude %> </br>
+
+</br>
+
+<%= f.submit "Create" %>
+<% end %>
+
+</br>
+</br>
+<%= link_to "Show Sighting" , sightings_path %>

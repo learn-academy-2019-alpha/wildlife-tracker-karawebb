@@ -1,0 +1,17 @@
+<h1>Wildlife SIGHTINGS</h1>
+<h1> Landing Page </h1>
+
+<%= link_to "Add A New Sighting", new_sighting_path({animal_id: @animal.id}) %>
+
+<ul> 
+        <%@sighting.each do |sighting| %>
+            <li><%= sighting.date %> <%= link_to "Update" , edit_sighting_path(sighting) %> </br> <%= link_to 'Delete', sighting_path(sighting), method: :delete %> 
+ </li>
+        <% end %>
+ 
+</ul>
+
+
+</br>
+
+    <%= link_to "Update Sighting" , edit_sighting_path(@animal) %>

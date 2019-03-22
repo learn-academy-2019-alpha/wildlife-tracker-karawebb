@@ -1,0 +1,24 @@
+<h3>Submit Animal</h3>
+
+<%= form_for @animal do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %> </br>
+
+</br>
+
+<%= f.label :latin_name %>
+<%= f.text_field :latin_name %> </br>
+
+</br>
+
+<%= f.label :kingdom %>
+<%= f.text_field :kingdom %> </br>
+
+</br>
+
+<%= f.submit "Create" %>
+<% end %>
+
+</br>
+</br>
+<%= link_to "Animal List" , animals_path %>

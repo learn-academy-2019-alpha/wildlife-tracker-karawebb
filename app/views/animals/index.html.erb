@@ -1,0 +1,18 @@
+<h1>Wildlife Tracker</h1>
+<h1> DISPLAY ANIMALS PAGE </h1>
+
+<%= link_to "Add A New Animal", new_animal_path %>
+
+<ul> 
+        <%@animal.each do |animal| %>
+            <li><%= animal.kingdom %> <%= link_to "Update  " , edit_animal_path(animal) %> <%= link_to 'Delete', animal_path(animal), method: :delete %> 
+ </li>
+         <%= link_to "Sighting" , sightings_path() %>
+        <% end %>
+ 
+</ul>
+
+
+</br>
+
+    
